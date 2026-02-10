@@ -23,3 +23,9 @@ jobs:
    - id: build
      name: Build
      run: dotnet build --no-restore
+
+   - id: test
+     if: steps.build.outcomw == 'success'
+     name: Test
+     run: dotnet test 
+      
