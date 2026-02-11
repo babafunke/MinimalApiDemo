@@ -27,5 +27,5 @@ jobs:
    - id: test
      if: steps.build.outcome == 'success'
      name: Test
-     run: dotnet test "MinimalApiDemoTests/MinimalApiDemoTests.csproj" --no-build"
+     run: dotnet test "MinimalApiDemoTests/MinimalApiDemoTests.csproj" --no-build
       
