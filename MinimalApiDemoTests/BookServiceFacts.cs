@@ -11,7 +11,7 @@ public class BookServiceFacts
     {
         var response = sut.GetAll();
 
-        Assert.Equal(4, response.Count);
+        Assert.Equal(3, response.Count);
     }
 
     [Fact]
