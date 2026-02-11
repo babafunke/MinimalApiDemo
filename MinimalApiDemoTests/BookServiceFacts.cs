@@ -11,7 +11,7 @@ public class BookServiceFacts
     {
         var response = sut.GetAll();
 
-        Assert.Equal(3, response.Count);
+        Assert.Equal(4, response.Count);
     }
 
     [Fact]
@@ -28,5 +28,13 @@ public class BookServiceFacts
         var response = sut.GetById(2);
 
         Assert.IsType<Book>(response);
+    }
+
+    [Fact]
+    public void GetByIdShouldBookDetails()
+    {
+        var response = sut.GetById(2);
+
+        Assert.Equal(2, response.Id);
     }
 }
